@@ -349,19 +349,19 @@ console.log('cuisine and name problemTen', vegetarianName)
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
 
-// function problemEightB(){
+function problemEightB(){
 
-//     let results;
-//     results = dishes.map(function(el){
-//         return el.cuisine
-//     }
-//     )
+    let results;
+    results = dishes.map(function(el){
+        return el.cuisine
+    }
+    )
+// Not sure why this isn't working :(. Come back later
+    return Set(results);
+}
 
-//     return Set(results);
-// }
-
-// let newArrayIngredientB = problemEightB();
-// console.log('new array string', newArrayIngredientB)
+let newArrayIngredientB = problemEightB();
+console.log('new array string', newArrayIngredientB)
 
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
