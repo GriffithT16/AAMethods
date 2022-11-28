@@ -250,22 +250,79 @@ console.log('evenServings from problemFive', evenServings)
 //Double Hint: Research 'javascript does array include item'
 //Filter
 
+function problemSix(){
 
+    let results;
+    results = dishes.filter(function(el){
+        console.log("el inside problemSix's filter: ", el)
+        if(el.ingredients.includes('chickpea')){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
+
+    return results;
+}
+
+let ingredientsInclude = problemSix();
+console.log('chickpea from problemSix', ingredientsInclude)
 
 //7. Create a function that will prompt the user to type the name of one ingredient. Then use a filter to find all the dishes whose ingredients array INCLUDES that ingredient. Return the new array.
 //Filter
 
+function problemSeven(){
+    userIngredient = prompt("Enter Ingredient here")
+    let results;
+    results = dishes.filter(function(el){
+        console.log("el inside problemSeven's filter: ", el)
+        if(el.ingredients.includes(userIngredient)){
+            return true;
+        }
+        else{
+            return false;
+        }
+    })
 
+    return results;
+}
+
+let userChoiceIngredient = problemSeven();
+console.log('user ingredient problemSeven', userChoiceIngredient)
 
 //8a. Create a function that will return an array of the string cuisine types. Ie, ["Italian", "Italian", "Mexican", ...]
 //Map
 
+function problemEight(){
 
+    let results;
+    results = dishes.map(function(el){
+        return el.cuisine
+    }
+    )
 
+    return results;
+}
+
+let newArrayIngredient = problemEight();
+console.log('new array string', newArrayIngredient)
 //9. Create a function that will return an array of strings, with the cuisine type appended to the start of the dish's name. Ie, ["Italian Pizza", "Italian Spaghetti", ...]
 //Map 
 
+function problemNine(){
 
+    let results;
+    results = dishes.map(function(el){
+        return (el.cuisine + " " + el.name)
+        
+    })
+
+    return results;
+}
+
+let cuisineName = problemNine();
+console.log('Cuisine + Name', cuisineName)
 
 //10. Create a function that will use advanced array methods on the 'dishes' array and return the result ["Vegetarian Lasagna", "Vegetarian Falafel", "Vegetarian Chili"]
 
@@ -276,6 +333,21 @@ console.log('evenServings from problemFive', evenServings)
 //BONUS
 
 //8b. Use the filter method to eliminate duplicate from problem 8a.
+
+// function problemEightB(){
+
+//     let results;
+//     results = dishes.map(function(el){
+//         return el.cuisine
+//     }
+//     )
+
+//     return Set(results);
+// }
+
+// let newArrayIngredientB = problemEightB();
+// console.log('new array string', newArrayIngredientB)
+
 
 //11. Create a function that will return dishes whose ingredients array INCLUDES "tomato" OR "cheese".
 //Hint: You do not want to check the array's indexes to find out what the array INCLUDES.
